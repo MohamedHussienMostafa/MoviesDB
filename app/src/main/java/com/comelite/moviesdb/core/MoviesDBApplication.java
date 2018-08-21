@@ -13,6 +13,7 @@ public class MoviesDBApplication extends Application {
     private static MoviesDBApplication instance;
     private NetComponent mNetComponent;
 
+
     public static MoviesDBApplication get() {
         if (instance == null)
             // This should never happen, but just in case
