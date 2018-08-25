@@ -7,4 +7,7 @@
     <string name="top_rated">Top Rated</string>
     <string name="popular">Popular</string>
     <string name="upcoming">Upcoming</string>
+
+    <string name="cast">Cast</string>
+    <string name="plot_explanation">Plot Explanation</string>
 </resources>

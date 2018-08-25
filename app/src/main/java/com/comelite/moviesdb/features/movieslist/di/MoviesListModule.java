@@ -16,7 +16,7 @@ public class MoviesListModule {
 
     @Provides
     @MoviesListScope
-    MoviesListContract.View providesMainScreenContractView() {
+    MoviesListContract.View provideMoviesListContractView() {
         return mView;
     }
 }

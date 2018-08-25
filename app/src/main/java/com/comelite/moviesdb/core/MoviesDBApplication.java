@@ -2,11 +2,14 @@ package com.comelite.moviesdb.core;
 
 import android.app.Application;
 
+import com.comelite.moviesdb.R;
 import com.comelite.moviesdb.core.constants.APIsConstants;
 import com.comelite.moviesdb.core.di.components.DaggerNetComponent;
 import com.comelite.moviesdb.core.di.components.NetComponent;
 import com.comelite.moviesdb.core.di.modules.AppModule;
 import com.comelite.moviesdb.core.di.modules.NetModule;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class MoviesDBApplication extends Application {
 
@@ -29,6 +32,11 @@ public class MoviesDBApplication extends Application {
                 .appModule(new AppModule(this))
                 .netModule(new NetModule(APIsConstants.BASE_URL))
                 .build();
+
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/Dubai-Regular.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build());
     }
 
     public NetComponent getNetComponent() {

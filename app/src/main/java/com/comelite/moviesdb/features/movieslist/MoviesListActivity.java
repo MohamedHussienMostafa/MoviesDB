@@ -2,7 +2,7 @@ package com.comelite.moviesdb.features.movieslist;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.comelite.moviesdb.R;
+import com.comelite.moviesdb.core.BaseActivity;
 import com.comelite.moviesdb.core.MoviesDBApplication;
 import com.comelite.moviesdb.features.movieslist.carouselui.CarouselPagerAdapter;
 import com.comelite.moviesdb.features.movieslist.di.DaggerMoviesListComponent;
@@ -23,7 +24,10 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MoviesListActivity extends AppCompatActivity implements MoviesListContract.View {
+public class MoviesListActivity extends BaseActivity implements MoviesListContract.View {
+
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
 
     @BindView(R.id.movies_content_layout)
     LinearLayout moviesContentLayout;
@@ -57,7 +61,7 @@ public class MoviesListActivity extends AppCompatActivity implements MoviesListC
     private final static int UP_COMING_TAB = 2;
 
     @Inject
-    MoviesListPresenter vehiclesListPresenter;
+    MoviesListPresenter moviesListPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +74,10 @@ public class MoviesListActivity extends AppCompatActivity implements MoviesListC
                 .moviesListModule(new MoviesListModule(this))
                 .build().inject(this);
 
-        vehiclesListPresenter.loadPopularMovies();
+        toolbar.setTitle(getResources().getString(R.string.app_name));
+        setSupportActionBar(toolbar);
+
+        moviesListPresenter.loadPopularMovies();
     }
 
     @Override
@@ -152,25 +159,4 @@ public class MoviesListActivity extends AppCompatActivity implements MoviesListC
         errorLayout.setVisibility(View.GONE);
         moviesContentLayout.setVisibility(View.GONE);
     }
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.main_menu, menu);
-//
-//        allVehiclesMenu = menu.findItem(R.id.all_vehicles_menu);
-//        allVehiclesMenu.setVisible(false);
-//
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        int id = item.getItemId();
-//        if (id == R.id.all_vehicles_menu) {
-//            NavigationManager.startVehiclesMapScreen(VehiclesListActivity.this, moviesModels);
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
 }

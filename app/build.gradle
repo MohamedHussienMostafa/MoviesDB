@@ -84,4 +84,9 @@ dependencies {
      * for Loading animation.
      */
     compile 'com.wang.avi:library:2.1.2'
+
+    /**
+     * calligraphy font
+     */
+    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
 }

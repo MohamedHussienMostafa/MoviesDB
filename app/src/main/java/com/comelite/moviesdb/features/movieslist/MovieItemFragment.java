@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.comelite.moviesdb.R;
+import com.comelite.moviesdb.features.NavigationManager;
 import com.comelite.moviesdb.features.movieslist.carouselui.CarouselLinearLayout;
 import com.comelite.moviesdb.models.MovieModel;
 
@@ -29,7 +30,7 @@ public class MovieItemFragment extends Fragment {
     private int screenWidth;
     private int screenHeight;
 
-    public static Fragment newInstance(Activity activity,ArrayList<MovieModel> movieModels,
+    public static Fragment newInstance(Activity activity, ArrayList<MovieModel> movieModels,
                                        int pos, float scale) {
         Bundle bundle = new Bundle();
         bundle.putInt(POSITION, pos);
@@ -74,13 +75,10 @@ public class MovieItemFragment extends Fragment {
         movieReleaseDateTv.setText(getActivity().getResources().getString(R.string.release_date) +
                 movieModels.get(position).getReleaseDate());
 
-        //handling click event
         movieImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getActivity(), ImageDetailsActivity.class);
-//                intent.putExtra(DRAWABLE_RESOURE, imageArray[postion]);
-//                startActivity(intent);
+                NavigationManager.openMovieDetailsScreen(getActivity(), movieModels.get(position));
             }
         });
 

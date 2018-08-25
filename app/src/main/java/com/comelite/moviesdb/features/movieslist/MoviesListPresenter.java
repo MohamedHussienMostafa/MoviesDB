@@ -1,6 +1,5 @@
 package com.comelite.moviesdb.features.movieslist;
 
-
 import com.comelite.moviesdb.apis.MoviesApi;
 import com.comelite.moviesdb.apis.Response;
 import com.comelite.moviesdb.core.constants.APIsConstants;
@@ -68,27 +67,4 @@ public class MoviesListPresenter implements MoviesListContract.Presenter {
                     }
                 });
     }
-
-//    new Observer<Response<ArrayList<MovieModel>>>() {
-//        @Override
-//        public void onSubscribe(Disposable d) {
-//
-//        }
-//
-//        @Override
-//        public void onNext(Response<ArrayList<MovieModel>> response) {
-//            mView.showContent(response.getResponse());
-//        }
-//
-//        @Override
-//        public void onError(Throwable e) {
-//            mView.showError(e.getMessage());
-//        }
-//
-//        @Override
-//        public void onComplete() {
-//            mView.showComplete();
-//        }
-//
-//    }
 }
