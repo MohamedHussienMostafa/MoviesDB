@@ -1,0 +1,34 @@
+<keymap version="1" name="Eclipse copy 1" parent="Eclipse">
+  <action id="$Copy">
+    <keyboard-shortcut first-keystroke="meta c" />
+  </action>
+  <action id="$Cut">
+    <keyboard-shortcut first-keystroke="shift delete" />
+  </action>
+  <action id="$Paste">
+    <keyboard-shortcut first-keystroke="meta v" />
+  </action>
+  <action id="$Undo">
+    <keyboard-shortcut first-keystroke="meta z" />
+  </action>
+  <action id="CommentByLineComment">
+    <keyboard-shortcut first-keystroke="ctrl slash" />
+    <keyboard-shortcut first-keystroke="ctrl divide" />
+    <keyboard-shortcut first-keystroke="meta slash" />
+  </action>
+  <action id="Editor Copy">
+    <keyboard-shortcut first-keystroke="meta c" />
+  </action>
+  <action id="Editor Paste">
+    <keyboard-shortcut first-keystroke="meta v" />
+  </action>
+  <action id="Editor Undo">
+    <keyboard-shortcut first-keystroke="meta z" />
+  </action>
+  <action id="EditorCut">
+    <keyboard-shortcut first-keystroke="shift delete" />
+  </action>
+  <action id="Replace">
+    <keyboard-shortcut first-keystroke="meta f" />
+  </action>
+</keymap>
