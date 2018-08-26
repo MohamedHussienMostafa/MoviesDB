@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/progressBar1"
+                style="@style/AVLoadingIndicatorView.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="visible"
+                app:indicatorColor="@color/blue"
+                app:indicatorName="LineScaleIndicator" />
+
+            <TextView
+                android:id="@+id/txt_loading"
+                fontPath="fonts/Dubai-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loading_text"
+                android:textColor="@color/blue"
+                tools:ignore="MissingPrefix" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/error_message_tv"
+            fontPath="fonts/Dubai-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/error_message"
+            android:textColor="@color/blue"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:ignore="MissingPrefix" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/movies_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/movies_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/top_rated_radio_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_background"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/top_rated" />
+
+            <RadioButton
+                android:id="@+id/popular_radio_button"
+                fontPath="fonts/Dubai-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_background"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/popular"
+                tools:ignore="MissingPrefix" />
+
+            <RadioButton
+                android:id="@+id/up_comping_radio_button"
+                fontPath="fonts/Dubai-Regular.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_button_background"
+                android:button="@android:color/transparent"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/upcoming"
+                tools:ignore="MissingPrefix" />
+
+        </RadioGroup>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/movies_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+
+</LinearLayout>
