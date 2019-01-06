@@ -6,8 +6,13 @@
           <option name="url" value="http://github.com" />
           <option name="userName" value="mohamed.hussien.mostafa@gmail.com" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://mohamedhussienmostafa@bitbucket.org/mohamedhussienmostafa/freeoffers.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
+    <option name="cloneParentDir" value="/Volumes/Development" />
   </component>
   <component name="Vcs.Log.App.Settings">
     <option name="MIGRATED" value="true" />
