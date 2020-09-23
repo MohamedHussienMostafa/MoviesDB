@@ -28,6 +28,9 @@
   <action id="EditorCut">
     <keyboard-shortcut first-keystroke="shift delete" />
   </action>
+  <action id="OverrideMethods">
+    <keyboard-shortcut first-keystroke="ctrl meta alt space" />
+  </action>
   <action id="Replace">
     <keyboard-shortcut first-keystroke="meta f" />
   </action>
