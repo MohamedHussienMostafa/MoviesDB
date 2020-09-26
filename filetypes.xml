@@ -1,6 +1,7 @@
 <application>
   <component name="FileTypeManager" version="17">
     <extensionMap>
+      <mapping pattern="Application" type="CLASS" />
       <mapping ext="webp" type="Image" />
       <mapping pattern="OrderHeader" type="PLAIN_TEXT" />
       <mapping ext="db" type="SQL" />
