@@ -3,6 +3,7 @@
     <extensionMap>
       <mapping pattern="Application" type="CLASS" />
       <mapping ext="webp" type="Image" />
+      <mapping ext="main.kts" type="Kotlin" />
       <mapping pattern="OrderHeader" type="PLAIN_TEXT" />
       <mapping ext="db" type="SQL" />
     </extensionMap>
