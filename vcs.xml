@@ -18,6 +18,10 @@
           <option name="url" value="http://bitbucket.org" />
           <option name="userName" value="mohamedhussienmostafa" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="http://dev.azure.com" />
+          <option name="userName" value="Mhussien" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="/Volumes/Development" />
