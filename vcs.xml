@@ -22,6 +22,14 @@
           <option name="url" value="http://dev.azure.com" />
           <option name="userName" value="Mhussien" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://gitlab.com/BlinkApp.net/blinkapp-android.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="http://gitlab.com" />
+          <option name="userName" value="mohamed.hussien.mostafa@gmail.com" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="/Volumes/Development" />
