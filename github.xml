@@ -3,6 +3,9 @@
     <account id="30f4ce06-f34d-462d-ad18-bc552614f51c" name="MohamedHussienMostafa">
       <server host="github.com" />
     </account>
+    <account id="4dcbec5d-2751-4ed0-b192-cf3381f49bdd" name="miraityhub">
+      <server host="github.com" />
+    </account>
   </component>
   <component name="GithubSettings">
     <option name="AUTH_TYPE" value="TOKEN" />
